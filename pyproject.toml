@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "frame3d-pdelta"
+version = "0.1.0"
+description = "Linear and P-Delta analysis of 3D frames with gamma_z (NBR 6118), cross-checked against OpenSees"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Luiz Ricardo Mantovani da Silva" }]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+validation = ["openseespy>=3.6", "pytest>=8"]
+
+[tool.setuptools]
+packages = ["frame3d"]
