@@ -86,7 +86,7 @@ m.add_element(base, top, E=21.5e6, G=9.0e6, section=rectangular_section(0.25, 0.
 m.add_nodal_load(top, fx=10.0, fz=-300.0)          # kN
 u1, u2 = solve_linear(m), solve_pdelta(m)
 print(gamma_z(m, u1).gamma_z, u2.displacements[top, 0] / u1.displacements[top, 0])
-# 1.1437 1.1437 — for a single column both reduce to 1 / (1 - N·L²/(3EI))
+# 1.1436 1.1436 — for a single column both reduce to 1 / (1 - N·L²/(3EI))
 ```
 
 Units are consistent but not enforced; the examples use kN and m.
